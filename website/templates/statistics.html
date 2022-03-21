@@ -1,0 +1,181 @@
+{%  extends "base.html" %}
+{% block title %}Statistics{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+ 
+    <style media="screen">
+   
+     html{
+         scroll-behavior: smooth;
+     } 
+      body{
+    background-color: #ab86ce;
+}
+.background{
+    width: 530px;
+    height:500px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+}
+/*form{
+    height: 300px;
+    width: 500px;
+   /* background-color: rgba(255,255,255,0.13);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 30%;
+    left: 20%;
+    /*border-radius: 10px;
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+}*/
+form *{
+    font-family: 'Poppins',sans-serif;
+    color: black;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+    
+}
+
+.summary{
+    font-family: 'Poppins',sans-serif;
+    color: black;
+    letter-spacing: 0.5px;
+}
+form{
+    
+    margin-left: 500px ;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 30%;
+    left: 15%;
+    padding: 50px 35px;
+}
+
+        h2{
+            color: rgb(0, 0, 0);
+        }
+button{
+    margin-top: 15px;
+    height: 10%;
+    width: 30%;
+    margin-left: 190px;
+    margin-bottom: 20px;
+    background-color: rgb(60, 7, 104);
+    color: #fdfdff;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+     
+
+    </style>
+  
+</head>
+<body>
+    <div class="background">
+       
+    </div>      
+                <div id="form">
+    
+    <form method="POST">
+        <h2 style="margin-left: 25px; margin-top: 40px;">CHECK YOUR STATISTICS DATE</h2><br>
+        <label for="Stats" style="margin-left: 65px;">CHOOSE YOUR TIME PERIOD TO VIEW:</label>
+        <select id="Stats" class="option" value="stats" name="stats">
+            <option label="30 Days" name="30_days" id="30_days" value="30_days">30 DAYS</option>
+            <option label="Till Today" name="till_date" id="till_date" value="till_date">TILL TODAY</option>
+        </select>
+        
+        <br><br>
+     
+        <button type="submit" class="button" name="submit" value="submit" onclick="window.location.href = '#display_graph';">Submit</button>
+        <br><br>
+    </form>
+</div>
+    <div id="display_graph" style="margin-top: 500px;">
+    {% if show %}
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <div class="chart" id="barchart">
+        <script type="text/javascript">
+                var fig = {{ plot | safe }};
+                Plotly.plot('barchart',fig,{});
+            </script>
+    </div>
+   
+  <div class = "summary" align="center">
+      <br>
+      <p> Salary: ₹ {{ salary }}</p>
+      <p> Total Expense: ₹ {{ total }}</p>
+      <p> Your saving: ₹ {{ salary-total }}</p>
+  </div>
+  {% endif %}
+</div>
+</body>
+</html>
+
+<!--canvas id="myChart" max-width="40" max-height="40"></canvas>
+    <script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: '{{ domain_name }}',
+            datasets: [{
+                label: '# of Votes',
+                data: {{ domain_total | safe }},
+                backgroundColor : [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(155, 159, 84, 0.2)',
+                    'rgba(25, 59, 94, 0.2)',
+                    'rgba(125, 159, 64, 0.2)',
+                    'rgba(255, 199, 64, 0.2)',
+                    'rgba(55, 19, 60, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(155, 159, 84, 0.2)',
+                    'rgba(25, 59, 94, 0.2)',
+                    'rgba(125, 159, 64, 0.2)',
+                    'rgba(255, 199, 64, 0.2)',
+                    'rgba(55, 19, 60, 0.2)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    
+    </script-->
+   
+
+{% endblock %}

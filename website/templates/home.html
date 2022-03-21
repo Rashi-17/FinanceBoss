@@ -1,0 +1,116 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+  %}
+  <br>
+  <h1 align="center"><u style="text-decoration: underline; text-decoration-style: double ;text-decoration-color: rgb(75, 73, 75);">FinanceBoss</u></h1>
+  
+  <!--form method="POST">
+    <div class="form-group">
+      <label for="salary">Salary</label>
+      <input
+        type="salary"
+        class="form-control"
+        id="salary"
+        name="salary"
+        placeholder="Enter salary"
+      />
+    </div>
+    <div align="center">
+      <button type="submit" class="btn btn-primary">Update Salary</button>
+    </div>
+    
+    
+    <br />
+    <div align="center">
+    <button type="submit" class="btn btn-primary" name="add_exp" value="add_exp">Add expenses</button>
+  </div>
+
+  <br />
+    <div align="center">
+    <button type="submit" class="btn btn-primary" name="stats" value="stats">Show Statistics</button>
+  </div>
+</form -->
+<!--DOCTYPE html>
+<html>
+<head-->
+ 
+  {% block head %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <style>
+    *{box-sizing: border-box;}
+    
+    body{
+    background-color: #ab86ce;
+  
+}
+.background{
+  position: absolute;
+}
+form{
+  position: absolute;
+}
+.column
+{
+  float: left;
+  width: 21.5%;
+  padding: 5px;
+    margin-right: 20px;
+    margin-left: 30px;
+    margin-top: 110px;
+    position: relative;
+  border: 3px solid black; 
+}
+.row::after
+{
+content: "";
+display: table;
+clear: both;
+}
+
+img {
+    height: 250px;
+     width: 100%;
+     top: 100px;
+   
+  }
+button{
+    position: absolute;
+  padding: 16px;
+  background-color: rgb(60, 7, 104);
+  border-radius: 12px;
+  top: 270px;
+  left: 90px;
+  width: 150px;
+ font-size: 16px;
+color: whitesmoke;
+  }
+    
+    </style>
+  
+  {% endblock %}
+<!--/head-->
+<body>
+  <form method="POST">
+  <div class="row">
+    <div class="column">
+      <img src="https://asset5.scripbox.com/wp-content/uploads/2020/03/expense-ratio-vector.png" width="100%;">
+      <button name="add_exp" value="add_exp">Add Expense</button>
+  </div>
+<div class="column">
+      <img src="https://asset5.scripbox.com/wp-content/uploads/2018/02/coffee-can-investing-vector.png" width="100%;">
+      <button name="stats" value="stats"> Statistics</button>
+  </div>
+  <div class="column">
+      <img src="https://asset5.scripbox.com/wp-content/uploads/2021/03/invest-rs-1000-every-month-vector.png" width="100%;">
+      <button name="advice" value="advice">Advice</button>
+  </div>
+    <div class="column">
+      <img src="https://asset5.scripbox.com/wp-content/uploads/2021/06/goal-based-investing-vector.png" width="100%;">
+      <button name="per_goal" value="per_goal">Personal Goals</button>
+  </div>
+    </div>
+  </form>
+</body>
+<!--/html-->
+  {% endblock %}

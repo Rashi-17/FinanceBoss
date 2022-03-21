@@ -1,0 +1,183 @@
+{% extends "base.html" %} {% block title %}Pesonal Goals{% endblock %} {% block content
+    %}
+    <!--DOCTYPE html>
+    <html lang="en">
+    <head-->
+        {% block head %}
+     
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+     
+        <style media="screen">
+    html{
+        scroll-behavior: smooth;
+    }     
+    body{
+        background-color:  #ab86ce;
+    }
+    .background{
+        width: 430px;
+        height: 520px;
+        position: absolute;
+        transform: translate(-50%,-50%);
+        left: 50%;
+        top: 50%;
+        
+    }
+    
+    form{
+        height: 600px;
+        width: 400px;
+        background-color: rgba(255,255,255,0.13);
+        position: absolute;
+        transform: translate(-50%,-50%);
+        top: 55%;
+       
+        left: 50%;
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255,255,255,0.1);
+        box-shadow: 0 0 40px rgba(8,7,16,0.6);
+        padding: 50px 35px;
+    }
+    form *{
+        font-family: 'Poppins',sans-serif;
+        color: black;
+        letter-spacing: 0.5px;
+        outline: none;
+        border: none;
+    }
+    
+    
+    input{
+        display: block;
+        height: 50px;
+        width: 100%;
+        background-color:whitesmoke;
+        border-radius: 3px;
+        padding: 0 10px;
+        margin-top: 8px;
+        font-size: 18px;
+        font-weight: 300;
+    }
+            
+    ::placeholder{
+        color: black;
+    }
+    button{
+        margin-top: 35px;
+        width: 80%;
+        margin-left: 34px;
+        margin-bottom: 10px;
+        background-color: rgb(60, 7, 104);
+        color: #fdfdff;
+        padding: 15px 0;
+        font-size: 14px;
+        font-weight: 600;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+            label{
+        display: block;
+        margin-top: 10px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    
+#per_goals {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 70%;
+}
+
+#per_goals td, #per_goals th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#per_goals tr:nth-child(even){background-color: #f2f2f2;}
+#per_goals tr:nth-child(odd){background-color: #f3dbff;}
+
+#per_goals tr:hover {background-color: #ddd;}
+
+#per_goals th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #343a38;
+  color: white;
+}
+    
+    
+        </style>
+      {% endblock %}  
+    <!--/head-->
+    <body>
+        <div class="background">
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>      
+                     <div id="form" class="card-body">
+    
+        <form method="POST">
+         <h2>Enter Your Target</h2>
+          <label>Goal</label>
+          <input type="text" name="Goal" id="Goal" placeholder="Enter detail of goal">
+          <label>Amount</label>
+          <input type="text" name="Amount" id="Amount" placeholder="Enter amount">
+          <label>Tenure</label>
+          <input type="datetime-local" step="1" class="form-control" id="Tenure" name="Tenure" placeholder="Enter date " />
+         
+          <button type="submit" class="button">Submit</button>
+          <button type="submit" class="button" name="display" id="display" value="display" onclick="window.location.href = '#display_table';">Show My Goals</button>
+        </form>
+    
+      </div>
+      <div id ="display_table" style="margin-top: 700px;"align="center">
+      {% if show %}
+      <h2> My Goals</h2>
+      <br>
+        <table class="table table-striped" id="per_goals">
+            <tr>
+                <th style="text-align: center;">Goal Description</th>
+                <th style="text-align: center;">Saving Amount</th>
+                <th style="text-align: center;">Target Date</th>
+            </tr>
+            {% for d in display%}
+            <tr>
+                <td>{{ d.details }}</td>
+                <td>{{ d.saving_amount }}</td>
+                <td>{{ d.target_date }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+      {% else %}
+      {% endif %}
+    </div>
+    </body>
+    <!--/html-->
+    {% endblock %}
+
+    <!--h2> My Goals...</h2>
+      <br>
+        <table class="table table-striped">
+            <tr>
+                <th>Goal Description</th>
+                <th>Saving Amount</th>
+                <th>Target Date</th>
+            </tr>
+           
+            <tr>
+                <td>Washing machine</td>
+                <td>20000</td>
+                <td>22/05/27}</td>
+            </tr>
+
+            <tr>
+                <td>Microwave</td>
+                <td>10000</td>
+                <td>22/06/30}</td>
+            </tr>
+            
+        </table-->

@@ -1,0 +1,79 @@
+{%  extends "base.html" %}
+{% block title %}Login{% endblock %}
+
+{% block content %}
+    <div class="body1">
+    <div class="container">
+        <input type="checkbox" id="flip">
+        <div class="cover">
+          <div class="front">
+            <div class="text">
+    
+              <span class="text-1">FinanceBoss <br></span>
+            </div>
+          </div>
+          <div class="back">
+            
+          </div>
+        </div>
+        <div class="forms">
+            <div class="form-content">
+              <div class="login-form">
+                <div class="title">Login</div>
+
+              <form method="POST" action="{{ url_for('auth.login') }}">
+                <div class="input-boxes">
+                  <div class="input-box">
+                    <i class="fas fa-envelope"></i>
+                    <input type="text" id ="email" name = "email" placeholder="Enter your email" required>
+                  </div>
+                  <div class="input-box">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                  </div>
+                  <div class="text"><a href="#">Forgot password?</a></div>
+                  <div class="button input-box">
+                    <input type="submit" id ="submit" name ="submit" Value="Log In">
+                    <!--button type="submit" class="btn btn-primary" id ="login" name ="login">Submit</button-->
+                  </div>
+                  <div class="text sign-up-text">Don't have an account? <label for="flip">Sigup now</label></div>
+                </div>
+              </form>
+          </div>
+
+            <div class="signup-form">
+              <div class="title">Signup</div>
+
+            <form method="POST" action="{{ url_for('auth.sign_up') }}">
+                <div class="input-boxes">
+                  <div class="input-box">
+                    <i class="fas fa-envelope"></i>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                  </div>
+                  <div class="input-box">
+                    <i class="fas fa-envelope"></i>
+                    <input type="text" id="email" name="email" placeholder="Enter your email" required>
+                  </div>
+                  <div class="input-box">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password1" name="password1" placeholder="Enter your password" required>
+                  </div>
+                  <div class="input-box">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password2" name="password2" placeholder="Confirm password" required>
+                  </div>
+                  <div class="button input-box">
+                    <input type="submit" id ="submit" name = "submit" Value="Sign Up">
+                    <!--button type="submit" class="btn btn-primary" id ="login" name ="login">Submit</button-->
+                  </div>
+                  <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
+                </div>
+          </form>
+        </div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+
+{% endblock %}
