@@ -1,11 +1,9 @@
-from flask import Blueprint, render_template, request, flash, jsonify
+from flask import Blueprint, render_template, request, flash
 from flask_login import login_required
 from flask_login import login_required, current_user
 from datetime import datetime
 from website.models import Expense
-#from .models import Expense
 from . import db
-import json
 
 exp_view = Blueprint('exp_view',__name__)
 
@@ -14,7 +12,7 @@ exp_view = Blueprint('exp_view',__name__)
 def expenses():
     if request.form.get('display'):
         flash('Displaying!', category='success')
-        display = Expense.query.filter_by(user_id=current_user.id)
+        display = Expense.query.filter_by(user_id=current_user.id).order_by(Expense.date)
         show=True
         return render_template('expenses.html',user=current_user,display=display,show=show)
     elif request.method == 'POST':
@@ -33,7 +31,6 @@ def expenses():
             new_exp = Expense(date=date,details=detail, amount=amount, user_id=current_user.id)
             db.session.add(new_exp)
             db.session.commit()
-            #exp = Expense.query.filter_by(details='food')
             flash('Expense added!', category='success')
             
 

@@ -16,7 +16,7 @@ def login():
         user = User.query.filter_by(email=email).first()
         if user:
             if check_password_hash(user.password, password):
-               # flash('Logged in successfully!', category='success')
+               
                 login_user(user, remember=True)
                 return redirect(url_for('views.home'))
             else:
@@ -34,7 +34,7 @@ def logout():
 
 @auth.route('/update', methods=['GET','POST'])
 def update():
-    #flash('Salary updated!56576567', category='success')
+
     if request.method == 'POST':
         if request.form.get('updateSal'):
             salary = request.form.get('salary')
@@ -46,14 +46,13 @@ def update():
                 db.session.query(User).filter(User.id == current_user.id).update({User.salary:salary})
                 db.session.commit()
                 flash('Salary updated!', category='success')
-                #return redirect(url_for('views.home'))
+               
         if request.form.get('domain') :
             if request.form.get('amount').lower()=='yes':
                 return redirect(url_for('auth.domainPer'))
             else:
                 return redirect(url_for('views.home'))
-       # flash(' updated!1223', category='success')
-   # flash('Salary updated!567', category='success')
+     
     return render_template("update.html",user=current_user)
 
 @auth.route('/domainPer', methods=['Get','POST'])

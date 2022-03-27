@@ -1,8 +1,6 @@
 {% extends "base.html" %} {% block title %}Domain Perentages{% endblock %} {% block content
     %}
-<!--DOCTYPE html>
-<html lang="en">
-<head-->
+
   
     {% block head %}
  
@@ -91,7 +89,7 @@ button{
     {% endblock %}
     
     
-<!--/head-->
+
 <body>
     <div class="background">
         <div class="shape"></div>
@@ -105,35 +103,36 @@ button{
     
     <form method="POST">
          <h2>Domain Values</h2>
-         (Enter how much percentage of salary do you want to spend in each domain)
+         (Enter how much percentage of salary do you want to spend in each domain (your savings are excluded))
       <label>Eating Out</label>
-      <input type="number" name="eating out" id="eating out">
+      <input type="number" name="eating out" id="eating out" placeholder="Default : 8% ">
       <label>Groceries</label>
-      <input type="number" name="groceries" id="groceries">
+      <input type="number" name="groceries" id="groceries" placeholder="Default : 9% ">
       <label>Clothes</label>
-      <input type="number" name="clothes" id="clothes">
+      <input type="number" name="clothes" id="clothes" placeholder="Default : 5% ">
       <label>Bills and Rent</label>
-      <input type="number" name="bills" id="bills">
+      <input type="number" name="bills" id="bills" placeholder="Default : 15% ">
       <label>Housing</label>
-      <input type="number" name="housing" id="housing">
+      <input type="number" name="housing" id="housing" placeholder="Default : 7% ">
       <label>Stationary</label>
-      <input type="number" name="stationary" id="stationary">
+      <input type="number" name="stationary" id="stationary" placeholder="Default : 3% ">
       <label>Travel</label>
-      <input type="number" name="travel" id="travel">
+      <input type="number" name="travel" id="travel" placeholder="Default : 10% ">
       <label>Entertainment</label>
-      <input type="number" name="entertainment" id="entertainment">
+      <input type="number" name="entertainment" id="entertainment" placeholder="Default : 5% ">
       <label>Health</label>
-      <input type="number" name="health" id="health">
+      <input type="number" name="health" id="health" placeholder="Default : 9% ">
       <label>Sport</label>
-      <input type="number" name="sport" id="sport">
+      <input type="number" name="sport" id="sport" placeholder="Default : 5% ">
       <label>Others</label>
-      <input type="number" name="others" id="others">
+      <input type="number" name="others" id="others" placeholder="Default : 12% ">
 
 <button type="submit" class="button">Submit</button>
     </form>
     
+    
 
   </div> 
 </body>
-<!--/html-->
+
 {% endblock %}

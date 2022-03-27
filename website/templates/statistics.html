@@ -26,19 +26,6 @@
     left: 50%;
     top: 50%;
 }
-/*form{
-    height: 300px;
-    width: 500px;
-   /* background-color: rgba(255,255,255,0.13);
-    position: absolute;
-    transform: translate(-50%,-50%);
-    top: 30%;
-    left: 20%;
-    /*border-radius: 10px;
-    border: 2px solid rgba(255,255,255,0.1);
-    box-shadow: 0 0 40px rgba(8,7,16,0.6);
-    padding: 50px 35px;
-}*/
 form *{
     font-family: 'Poppins',sans-serif;
     color: black;
@@ -126,56 +113,6 @@ button{
 </body>
 </html>
 
-<!--canvas id="myChart" max-width="40" max-height="40"></canvas>
-    <script>
-    var ctx = document.getElementById('myChart').getContext('2d');
-    var myChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: '{{ domain_name }}',
-            datasets: [{
-                label: '# of Votes',
-                data: {{ domain_total | safe }},
-                backgroundColor : [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)',
-                    'rgba(155, 159, 84, 0.2)',
-                    'rgba(25, 59, 94, 0.2)',
-                    'rgba(125, 159, 64, 0.2)',
-                    'rgba(255, 199, 64, 0.2)',
-                    'rgba(55, 19, 60, 0.2)'
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)',
-                    'rgba(155, 159, 84, 0.2)',
-                    'rgba(25, 59, 94, 0.2)',
-                    'rgba(125, 159, 64, 0.2)',
-                    'rgba(255, 199, 64, 0.2)',
-                    'rgba(55, 19, 60, 0.2)'
-                ],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
-        }
-    });
 
-    
-    </script-->
-   
 
 {% endblock %}

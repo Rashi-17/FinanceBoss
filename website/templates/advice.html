@@ -1,8 +1,6 @@
 {% extends "base.html" %} {% block title %}Advice{% endblock %} {% block content
     %}
-    <!--DOCTYPE html>
-    <html>
-    <head-->
+    
         {% block head %}
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,7 +8,7 @@
         
         
     form{
-        height: 9150px;
+        height: 10150px;
         width: 900px;
         background-color: rgba(255,255,255,0.13);
        
@@ -34,12 +32,19 @@
         
         </style>
         {% endblock %}
-    <!--/head-->
+    
     <body>
       <div id="form">
      
            <form>
-          <h1 style="font-size: 50px;">Advice for Finance Management</h1>
+            <h1 style="font-size: 50px;">Advice for your expenditure</h1>
+            {% if exceed %}
+           <b> <pre style="color: red; font-size: 18px; font-family: Verdana, Geneva, Tahoma, sans-serif;">{{msg}}</pre> </b>
+            {% else %}
+            <pre style='color: green ; font-size: 18px; font-style: italic;'>{{msg}}</pre>
+            {% endif %}
+          <br><br>
+          <h1 style="font-size: 45px;">Advice for Finance Management</h1>
           <br><br>
     <h2 style="font-style: italic;font-size: 40px;">14 Ways to Manage Expenses</h2>
     <br>
@@ -249,5 +254,5 @@
           </form>    
       </div>
     </body>
-    <!--/html-->
+   
     {% endblock %}

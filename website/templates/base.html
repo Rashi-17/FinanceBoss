@@ -18,19 +18,7 @@
 
         <link rel="stylesheet" text='text/css' href="{{ url_for('static', filename='style.css') }}" />
 
-        <!--link rel="stylesheet"
-        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script-->
-          <!--script src=”https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js”></script>
-
-          <script src=”https://cdn.plot.ly/plotly-latest.min.js”></script-->
-            <!--script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
-            <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-            <script src="https://d14fo0winaifog.cloudfront.net/plotly-basic.js"></script-->
-            
-          
+       
             <title> {% block title %} Home {% endblock %} </title>
     </head>
     <body>
@@ -52,10 +40,7 @@
               <a class="nav-item nav-link" id="home" href="/" >Home</a>
               <a class="nav-item nav-link" id="logout" href="/logout">Logout</a>
               <a class="nav-item nav-link" id="update" href="/update" >Update</a>
-             
-              {% else %}
-              <!--a class="nav-item nav-link" id="login" href="/login">Login</a>
-              <a class="nav-item nav-link" id="signUp" href="/sign-up">Sign Up</a-->
+                        
               
               {% endif %}
               
@@ -100,9 +85,9 @@
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous">
         </script>
-        <!--script
+        <script
         type="text/javascript"
-        src="{{ url_for('static', filename='exp.js') }}">
-        </script-->
+        src="{{ url_for('static', filename='index.js') }}">
+        </script>
     </body>
 </html>

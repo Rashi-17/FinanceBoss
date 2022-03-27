@@ -1,70 +1,20 @@
 date,detail,amount,domain
-1,Momos,120,Eating Out
-1,Starbucks,250,Eating Out
-1,Cheesy fries,170,Eating Out
-2,Aata,300,Bills and Rent
-2,Milk,300,Groceries
-2,Cab,150,Groceries
-2,Dal,230,Bills and Rent
-2,Bus,50,Eating Out
-3,Metro recharge,150,Groceries
-3,Autorickshaw,150,Eating Out
-3,E-rickshaw,150,Groceries
-3,Cafe,500,Bills and Rent
-3,Food court,500,Groceries
-4,grofers,300,Bills and Rent
-4,cable bill,1000,Bills and Rent
-4,Train,150,Clothes
-4,Metro card,150,Groceries
-4,Milk & vegetables,300,Bills and Rent
-4,grofers,1500,Clothes
-4,water bill,500,Bills and Rent
-4,House rent,5000,Others
-4,Electricity bill,2000,Bills and Rent
-5,westside,500,Clothes
-5,Milk and Vegetables,265,Clothes
-5,BP medicines,103,Clothes
-5,chocolate,300,Clothes
-5,wedges,500,Clothes
-5,Bus,150,Eating Out
-5,socks,500,Clothes
-5,Coffee,150,Eating Out
-6,hoodie,600,Clothes
-6,pants,800,Clothes
-7,Octave,500,Clothes
-7,urbanic,1000,Clothes
-10,Straightener,500,Bills and Rent
-10,Eyeliner,300,Bills and Rent
-10,lifestore,500,Bills and Rent
-10,Sanitizer,100,Others
-10,Oil,300,Health
-11,Sugar check up,150,Others
-11,Dental check up,500,Others
 12,wifi bill,500,Bills and Rent
-12,Insurance,4400,Others
-15,Netflix,500,Bills and Rent
-15,Movie,400,Bills and Rent
-17,Jio,600,Entertainment
-20,Curtains,1500,Housing
-18,Swimming,700,Entertainment
-21,Kitchen Items,1775,Housing
-24,Books,1500,Stationary
 1,chai and Maggie,80,Eating Out
 1,Momos,120,Eating Out
-1,Zomato,400,Bills and Rent
-2,Aata ,300,Eating Out
-2,Mustard Oil,150,Groceries
+2,Aata,300,Groceries
+2,Mustard Oil,150,Travel
 2,Milk,300,Groceries
-2,Besan,70,Eating Out
-3,pizza,300,Clothes
-3,Cab,300,Bills and Rent
-4,grofers,400,Bills and Rent
-5,Milk and Vegetables,300,Clothes
-5,BP medicines,103,Clothes
+2,Besan,70,Travel
+3,pizza,300,Groceries
+3,Cab,300,Groceries
+4,grofers,400,Groceries
+5,Milk and Vegetables,300,Groceries
+5,BP medicines,103,Health
 5,wedges,500,Clothes
-5,Bus,150,Eating Out
-5,flipflop,500,Bills and Rent
-5,Coffee,150,Eating Out
+5,Bus,150,Travel
+5,flipflop,500,Eating Out
+5,Coffee,150,Travel
 7,skirts,500,Clothes
 7,Octave,500,Clothes
 7,suit set,500,Clothes
@@ -72,34 +22,35 @@ date,detail,amount,domain
 25,White board marker,100,Stationary
 5,Eraser,5,Travel
 25,Personal Diary,125,Stationary
-26,Pen and others,150,Stationary
+26,Pen and others,125,Stationary
 26,Brush set,200,Stationary
 10,Earing,100,Others
-10,lifestore,300,Bills and Rent
-10,Oil,300,Health
-10,Sugar check up,200,Bills and Rent
+10,lifestore,300,Groceries
+10,Oil,300,Groceries
+10,Sugar check up,200,Eating Out
 10,Colgate,50,Others
-10,Moov: Pain relief cream,90,Health
+10,Moov: Pain relief cream,90,Others
 11,Tooth brush,20,Others
 12,Internet,1000,Bills and Rent
 11,Eye drop,50,Others
-15,Netflix,499,Bills and Rent
-15,LSD Cafe,700,Bills and Rent
-15,TBK kulchas,200,Entertainment
-2,E-rickshaw,100,Groceries
-3,Metro recharge,150,Groceries
-3,Autorickshaw,150,Eating Out
-5,Mumbai trip,5000,Others
-2,Cab,200,Bills and Rent
-4,Train,150,Clothes
-16,Starbucks,200,Entertainment
+15,Netflix,499,Eating Out
+15,LSD Cafe,700,Eating Out
+15,TBK kulchas,200,Eating Out
+2,E-rickshaw,100,Travel
+3,Metro recharge,150,Travel
+3,Autorickshaw,150,Travel
+16,Starbucks,200,Eating Out
+2,Cab,200,Eating Out
+4,Train,150,Travel
+5,Mumbai trip,5000,Bills and Rent
 15,Chayoos,200,Eating Out
-16,Pasta,210,Entertainment
+16,Pasta,210,Eating Out
 15,Disprin,100,Eating Out
 17,Movie Night,550,Entertainment
 17,youtube premium,1000,Entertainment
 18,Swimming,700,Entertainment
 20,Tata sky,1699,Entertainment
-2,Aata,300,Bills and Rent
-15,Chayoos,200,Eating Out
-18,GYM,3000,Entertainment
+18,GYM,3000,Sport
+22,bugerking,200,Eating Out
+22,Skirt,500,Housing
+7,jumpsuit,500,Clothes

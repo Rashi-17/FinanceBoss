@@ -1,24 +1,17 @@
-#from website import convert_categorical
 import pandas as pd
 import csv
-from plotly import utils
-from website.domains.classify_model import convert_categorical,normalize,train_model
+from website.domains.classify_model import convert_categorical,train_model
 
-"""import plotly.graph_objs as go
-import json
-import plotly.offline as plt"""
+
 
 
 def domain_classify():
     classifier = train_model()
     categorical_cols=['detail']
     dataframe_raw1 = pd.read_csv("user_expense.csv")
-    final_df1 = convert_categorical(dataframe_raw1,categorical_cols)#pd.DataFrame(data_numpy,columns=['detail','amount','domain'])
-    norm_df1 = normalize(final_df1)
-    preds1 = classifier.predict(norm_df1)
-    """print(norm_df1)
-    print(final_df1)
-    print(preds1)"""
+    final_df1 = convert_categorical(dataframe_raw1,categorical_cols)
+    preds1 = classifier.predict(final_df1)
+    
 
     with open('user_expense.csv','r') as read_obj,\
         open('with_domain.csv','w',newline='') as write_obj:
@@ -59,17 +52,7 @@ def domain_classify():
             calulation['Sport']+=dataset.loc[i,'amount']
         if dataset.loc[i,'domain'] == 'Others':
             calulation['Others']+=dataset.loc[i,'amount']
-    """domain_name = list(calulation.keys())
-    domain_total = list(calulation.values())
     
-    trace1 = go.Bar(x=domain_name, y=domain_total)
-    layout = go.Layout(title="Expenses of domain", xaxis=dict(title="Domain"),
-                       yaxis=dict(title="Expense"), )
-    data = [trace1]
-    fig = go.Figure(data=data, layout=layout)
-    fig_json = json.dumps(fig, cls=utils.PlotlyJSONEncoder)
-    plt.plot(fig)"""
-    #print(calulation)
     return calulation,total
 
     
