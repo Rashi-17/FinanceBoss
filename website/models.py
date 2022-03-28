@@ -28,7 +28,7 @@ class User(db.Model, UserMixin):
     password = db.Column(db.String(150), nullable=False)
     user_name = db.Column(db.String(150), nullable=False)
     salary = db.Column(db.Integer)
-    loggedin_date = db.Column(db.DateTime(timezone=True), default=func.now(), nullable=False)
+    signup_date = db.Column(db.DateTime(timezone=True), default=func.now(), nullable=False)
     expenses = db.relationship('Expense')
     goals = db.relationship('Goal')
     domainPer = db.relationship('DomainPer')
