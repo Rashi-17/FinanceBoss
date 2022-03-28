@@ -16,8 +16,8 @@ class Goal(db.Model):
     details = db.Column(db.String(1000), nullable=False)
     savings = db.Column(db.Integer, default=3)
     saving_amount = db.Column(db.Integer, nullable=False)
-    tenure_expected = db.Column(db.String(100))
-    tenure_actual = db.Column(db.String(100))
+    tenure_expected = db.Column(db.Integer)
+    tenure_actual = db.Column(db.Integer)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     
 
